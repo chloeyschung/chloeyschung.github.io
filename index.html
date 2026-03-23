@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoonsoo Chung — Product Manager</title>
+  <title>Yoonsoo Chung</title>
   <link rel="icon" href="favicon_y.svg" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -33,13 +33,19 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 0 48px;
       height: 56px;
-      align-items: center;
       background: var(--white);
       border-bottom: 1px solid var(--navy);
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
     }
 
     .nav-logo {
@@ -273,6 +279,12 @@
       padding: 56px 48px;
     }
 
+    .section-body > p {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
     /* ── About ── */
     .about-grid {
       display: grid;
@@ -470,21 +482,23 @@
 <body>
 
   <!-- Nav -->
-  <nav class="page" style="max-width:1000px; margin:0 auto;">
-    <a class="nav-logo" href="#hero">Yoonsoo Chung</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li class="lang-dropdown">
-        <button class="lang-btn" onclick="this.parentElement.classList.toggle('open')">KO <span class="lang-arrow">▾</span></button>
-        <ul class="lang-menu">
-          <li><a class="lang-active">KO</a></li>
-          <li><a href="en.html">EN</a></li>
-        </ul>
-      </li>
-    </ul>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">Yoonsoo Chung</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="lang-dropdown">
+          <button class="lang-btn" onclick="this.parentElement.classList.toggle('open')">KO <span class="lang-arrow">▾</span></button>
+          <ul class="lang-menu">
+            <li><a class="lang-active">KO</a></li>
+            <li><a href="en.html">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <div class="page">
@@ -501,16 +515,6 @@
           <p class="hero-desc">다양한 도메인에 걸친<br />사업 맥락 이해, 프로덕트 관점, 실행 경험</p>
         </div>
       </div>
-      <div class="hero-bottom">
-        <div class="hero-stat">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Years of Experience</div>
-        </div>
-        <div class="hero-stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Companies</div>
-        </div>
-      </div>
     </section>
 
     <!-- About -->
@@ -520,16 +524,7 @@
         <div class="section-title">About</div>
       </div>
       <div class="section-body">
-        <div class="about-grid">
-          <div class="about-item">
-            <p class="about-item-label">Role</p>
-            <p>서비스 구조·화면·정책 설계, 운영정책 수립·관리, 데이터 기획 및 모델 검증. 스펙 산정부터 빈 부분 찾기, 사용성 개선(UX/UI), 문서 작성까지 제품 기획 전반을 담당합니다.</p>
-          </div>
-          <div class="about-item">
-            <p class="about-item-label">Strength</p>
-            <p>정합성을 꼼꼼히 따져보고, 팀 전체가 같은 이해를 가져가도록 만드는 것을 잘합니다. 개발자들과 직접 대화하며 로직을 이해하고 이슈를 함께 해결하는 방식으로 일합니다.</p>
-          </div>
-        </div>
+        <p>문제를 정의하고 방향을 설정합니다. 비즈니스 맥락과 기술 가능성을 함께 고려하고, 팀 전체가 같은 이해를 가져가도록 조율합니다. 정합성을 꼼꼼히 따져보고, 개발 로직을 이해하며 이슈를 해결합니다. AI 기술이 유저에게 닿는 모든 접점 — 구조, 화면, 정책, 데이터 — 을 기획하고 다듬습니다.</p>
         <div class="skills-row">
           <p class="skills-label">Skills</p>
           <div class="skills-list">
@@ -559,7 +554,7 @@
           <span class="project-index">01</span>
           <div class="project-info">
             <p class="project-name">AI Product Management — NC AI</p>
-            <p class="project-desc">언어, 비전, 오디오, 멀티모달 모델을 활용한 제품을 기획·관리. 리서치·엔지니어링 팀과 협업하여 제품 워크플로우, 데이터 파이프라인, 시스템 구조를 설계하고, 자율주행 로봇·인포테인먼트·미디어 서비스에 모델을 연동하는 외부 파트너 협업을 진행.</p>
+            <p class="project-desc">언어, 비전, 오디오, 멀티모달 모델 등을 활용한 생성형 AI 기반 프로덕트 기획. R&D 팀과 협업하여 프로덕트 워크플로우, 데이터 파이프라인, 시스템 구조를 설계. 텍스트/비주얼/영상 편집 UX/UI.</p>
             <div class="project-tags">
               <span class="project-tag">AI Product</span>
               <span class="project-tag">Multimodal</span>
@@ -573,11 +568,11 @@
           <span class="project-index">02</span>
           <div class="project-info">
             <p class="project-name">AI Product Management — NCSOFT</p>
-            <p class="project-desc">NCSOFT에서 AI 제품 기획을 담당. 생성형 애플리케이션의 UX/UI 구조 및 와이어프레임 설계, 사용성과 인터랙션 개선을 중심으로 AI 기반 서비스 기획 전반을 수행.</p>
+            <p class="project-desc">NLP 기술 기반 B2B 사업제휴 및 서비스 기획. 차량용 개인화 AI 서비스(CES 2024), AI 뉴스 요약·큐레이션·TTS, 대화형 AI 자율주행 로봇 등 외부 파트너와 PoC 진행을 위한 기술·개발 협의 및 유저 시나리오·API 연동 기획. AI 텍스트 생성 관리 툴 기획.</p>
             <div class="project-tags">
-              <span class="project-tag">AI Product</span>
-              <span class="project-tag">Generative AI</span>
-              <span class="project-tag">Wireframing</span>
+              <span class="project-tag">B2B Partnership</span>
+              <span class="project-tag">Service Planning</span>
+              <span class="project-tag">Product QA</span>
             </div>
           </div>
           <span class="project-period">2023.02 — 2025.01</span>
@@ -586,10 +581,12 @@
         <div class="project-row">
           <span class="project-index">03</span>
           <div class="project-info">
-            <p class="project-name">Content Partnership & Business Development — NCSOFT</p>
-            <p class="project-desc">NCSOFT 콘텐츠 파트너십 및 사업개발 담당. 외부 파트너사와의 협업 체계 구축 및 비즈니스 확장을 위한 전략 수립과 실행을 담당.</p>
+            <p class="project-name">Content Partnership & Marketing — NCSOFT</p>
+            <p class="project-desc">글로벌 팬덤 앱서비스 UNIVERSE 사업개발·IP 제휴 및 마케팅. 서비스 운영 및 앱 전면 개편 대응. 서비스 지표 데이터 분석/관리. 브랜디드 유튜브 콘텐츠 제작 및 음원 마케팅 진행.</p>
             <div class="project-tags">
-              <span class="project-tag">Partnership</span>
+              <span class="project-tag">IP Partnership</span>
+              <span class="project-tag">Data Analysis</span>
+              <span class="project-tag">Content Marketing</span>
               <span class="project-tag">Business Development</span>
             </div>
           </div>

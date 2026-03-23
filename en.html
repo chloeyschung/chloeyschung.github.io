@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoonsoo Chung — Product Manager</title>
+  <title>Yoonsoo Chung</title>
   <link rel="icon" href="favicon_y.svg" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -32,13 +32,19 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 0 48px;
       height: 56px;
-      align-items: center;
       background: var(--white);
       border-bottom: 1px solid var(--navy);
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
     }
 
     .nav-logo {
@@ -267,6 +273,12 @@
 
     .section-body { padding: 56px 48px; }
 
+    .section-body > p {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -456,21 +468,23 @@
 </head>
 <body>
 
-  <nav class="page" style="max-width:1000px; margin:0 auto;">
-    <a class="nav-logo" href="#hero">Yoonsoo Chung</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li class="lang-dropdown">
-        <button class="lang-btn" onclick="this.parentElement.classList.toggle('open')">EN <span class="lang-arrow">▾</span></button>
-        <ul class="lang-menu">
-          <li><a href="index.html">KO</a></li>
-          <li><a class="lang-active">EN</a></li>
-        </ul>
-      </li>
-    </ul>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">Yoonsoo Chung</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="lang-dropdown">
+          <button class="lang-btn" onclick="this.parentElement.classList.toggle('open')">EN <span class="lang-arrow">▾</span></button>
+          <ul class="lang-menu">
+            <li><a href="index.html">KO</a></li>
+            <li><a class="lang-active">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <div class="page">
@@ -487,16 +501,6 @@
           <p class="hero-desc">Business Context, Product Thinking, and Execution Across Domains</p>
         </div>
       </div>
-      <div class="hero-bottom">
-        <div class="hero-stat">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Years of Experience</div>
-        </div>
-        <div class="hero-stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Companies</div>
-        </div>
-      </div>
     </section>
 
     <!-- About -->
@@ -506,16 +510,7 @@
         <div class="section-title">About</div>
       </div>
       <div class="section-body">
-        <div class="about-grid">
-          <div class="about-item">
-            <p class="about-item-label">Role</p>
-            <p>Service structure, screen, and policy design. Operations policy development and management. Data planning and model validation. From spec definition and gap analysis to UX/UI improvement and documentation.</p>
-          </div>
-          <div class="about-item">
-            <p class="about-item-label">Strength</p>
-            <p>Good at checking for consistency and making sure everyone is on the same page. I work by talking directly with developers to understand the logic and resolve issues together.</p>
-          </div>
-        </div>
+        <p>Defines problems and sets direction. Considers both business context and technical feasibility, and aligns the team around a shared understanding. Thorough about consistency, and resolves issues by understanding the development logic. Plans and refines every touchpoint where AI meets users — structure, UX/UI, policies, and data.</p>
         <div class="skills-row">
           <p class="skills-label">Skills</p>
           <div class="skills-list">
@@ -545,7 +540,7 @@
           <span class="project-index">01</span>
           <div class="project-info">
             <p class="project-name">AI Product Management — NC AI</p>
-            <p class="project-desc">Planning and managing products utilizing language, vision, audio, and multimodal models. Collaborating with research and engineering teams to design product workflows, data pipelines, and system structures. Leading external partnerships to integrate models into autonomous robots, infotainment systems, and media services.</p>
+            <p class="project-desc">Generative AI product planning utilizing language, vision, audio, and multimodal models. Collaborated with R&D teams to design product workflows, data pipelines, and system architecture. UX/UI for text, visual, and video editing.</p>
             <div class="project-tags">
               <span class="project-tag">AI Product</span>
               <span class="project-tag">Multimodal</span>
@@ -559,11 +554,11 @@
           <span class="project-index">02</span>
           <div class="project-info">
             <p class="project-name">AI Product Management — NCSOFT</p>
-            <p class="project-desc">Led AI product planning at NCSOFT. Designed UX/UI structures and wireframes for generative applications, focusing on improving usability and interaction for AI-based services.</p>
+            <p class="project-desc">B2B partnerships and service planning based on NLP technology. Technical and development alignment with external partners for PoC — in-vehicle personalized AI service (CES 2024), AI news summarization/curation/TTS, and conversational AI on autonomous robots. UX/UI and product planning for an AI text generation and management tool.</p>
             <div class="project-tags">
-              <span class="project-tag">AI Product</span>
-              <span class="project-tag">Generative AI</span>
-              <span class="project-tag">Wireframing</span>
+              <span class="project-tag">B2B Partnership</span>
+              <span class="project-tag">Service Planning</span>
+              <span class="project-tag">Product QA</span>
             </div>
           </div>
           <span class="project-period">2023.02 — 2025.01</span>
@@ -572,10 +567,12 @@
         <div class="project-row">
           <span class="project-index">03</span>
           <div class="project-info">
-            <p class="project-name">Content Partnership & Business Development — NCSOFT</p>
-            <p class="project-desc">Managed content partnerships and business development at NCSOFT. Built external collaboration frameworks and drove business expansion strategies.</p>
+            <p class="project-name">Content Partnership & Marketing — NCSOFT</p>
+            <p class="project-desc">Business development, IP partnerships, and marketing for UNIVERSE, a global fandom app service. Handled service operations and responded to a full app overhaul. Analyzed and managed service metrics. Produced branded YouTube content and led music marketing campaigns.</p>
             <div class="project-tags">
-              <span class="project-tag">Partnership</span>
+              <span class="project-tag">IP Partnership</span>
+              <span class="project-tag">Data Analysis</span>
+              <span class="project-tag">Content Marketing</span>
               <span class="project-tag">Business Development</span>
             </div>
           </div>
